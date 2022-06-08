@@ -1,0 +1,13 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block extrahead %}
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock extrahead %}
+
+{% block content %}
+<div class="bg-image" style="background-image: url('{% static 'images/pic1.jpg' %}')">
+    <div class="card">
+        <h1>Dobrodosli</h1>
+    </div>
+</div>
+{% endblock content %}

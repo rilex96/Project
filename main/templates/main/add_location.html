@@ -1,0 +1,35 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block extrahead %}
+<link rel="stylesheet" href="{% static 'css/location.css' %}">
+{% endblock extrahead %}
+{% block content %}
+{% if user.is_authenticated %}
+<center>
+
+    {% if submitted %}
+    <h1>Vaša Lokacija Je Dodata Uspešno!!!</h1>
+
+    {% else %}
+    <h1>Dodajte Lokaciju</h1>
+    <br><br>
+    <div class="form__card">
+        <form action="" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+
+            {{ form.as_p }}
+
+            <input type="submit" value="Dodajte Lokaciju" class="button_add_location">
+        </form>
+    </div>
+
+
+    {% endif %}
+</center>
+{% else %}
+<h1>Sorry! You Must Be Logged In To View This Page...</h1>
+
+<a href="#">Login Here</a>
+{% endif %}
+
+{% endblock content %}

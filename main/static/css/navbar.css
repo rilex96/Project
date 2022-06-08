@@ -1,0 +1,120 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+}
+
+.brand__title a{
+    font-size: 2rem;
+    margin: .5rem 1rem;
+    text-decoration: none;
+    color: white;
+}
+
+.nav__list ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav__list li {
+    list-style-type: none;
+}
+
+.nav__list li a {
+    text-decoration: none;
+    color: white;
+    padding: 2rem;
+    display: block;
+    transition: all .5s ease 0s;
+    font-size: 1.5rem;
+}
+.nav__list li a:hover {
+    background-image: linear-gradient(0deg, rgba(87,0,0,1) 0%, rgba(131,3,3,1) 42%, rgba(219,70,70,1) 100%);
+    background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fil-color: transparent;
+}
+
+.brand__title:hover {
+    background-image: linear-gradient(0deg, rgba(87,0,0,1) 0%, rgba(131,3,3,1) 42%, rgba(219,70,70,1) 100%);
+    background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fil-color: transparent;
+    cursor: pointer;
+}
+
+
+.menu__toggle {
+    position: absolute;
+    top: .75rem;
+    right:  1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.menu__toggle .bars {
+    height: 3px;
+    width: 100%;
+    border-radius: 15px;
+    background-color: white;
+    transition: all .5s ease;
+}
+
+
+@media (max-width: 700px) {
+    .nav__list {
+        display: none;
+        width: 100%;
+    }
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nav__list ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .menu__toggle {
+        display: flex;
+    }
+
+    .brand__title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 2rem;
+    }
+    .nav__list li{
+        text-align: center;
+    }
+    .nav__list li a {
+        padding: 2rem 1rem;
+    }
+    .nav__list.active {
+        display: flex;
+    }
+}

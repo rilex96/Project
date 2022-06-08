@@ -1,0 +1,55 @@
+.helptext {
+    display: none;
+}
+body {
+    background-color: #070e24;
+    color: white;
+}
+
+.registration__card ul {
+    display: none;
+}
+.registration__card {
+    border: 1px solid white;
+    margin-top: 2em;
+    width: 70vw;
+    height: fit-content;
+    padding: 2em;
+    color: white;
+    background-color: rgb(4, 28, 37);
+    border-radius: 20px;
+    box-shadow: 0 5px 5px rgb(16, 23, 126), 0 10px 10px darkblue;
+}
+.registration__card input {
+    width: 80%;
+    display: block;
+    padding: 1em;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 20px;
+}
+
+.registration__card label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+input[type="submit"] {
+    padding: 1rem;
+    width: max-content;
+    margin-bottom: 3rem;
+    background-color: rgb(6, 68, 65);
+    border: none;
+    font-size: 1.5rem;
+    border-radius: 20px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 700;
+    color: white;
+    margin-top: 1em;
+}
+
+
+
+
+

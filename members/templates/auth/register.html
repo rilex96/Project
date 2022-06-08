@@ -1,0 +1,30 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block extrahead %}
+<link rel="stylesheet" href="{% static 'css/registration.css' %}">
+{% endblock extrahead %}
+{% block content %}
+{% if form.errors %}
+<main>
+<div class="alert__message" role="alert">
+    <p>Postoji greška u formi, molim Vas da unesete ispravno</p>
+    <button type="button" class="button_close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{% endif %}
+<center>
+    <h1>Registracija</h1>
+<div class="registration__card">
+    
+    <br>
+    <form action="{% url 'register_user' %}" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+
+        <br>
+        <input type="submit" value="Registruj Se" name="Login" />
+    </form>
+</div>
+</center>
+</main>
+
+{% endblock content %}

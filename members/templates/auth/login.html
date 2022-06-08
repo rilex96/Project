@@ -1,0 +1,22 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block extrahead %}
+    <link rel="stylesheet" href="{% static 'css/registration.css' %}" />
+{% endblock extrahead %}
+{% block content %}
+<center>
+    <h1>Logovanje</h1>
+    <br>
+    <form action="" method="post">
+        {% csrf_token %}
+        <div class="registration__card">
+            <label for="username">Korisnicko Ime</label>
+            <input type="text" name="username" id="username" aria-describedby="username" />
+            <label for="password">Šifra</label>
+            <input type="password" name="password" />
+            <input type="submit" value="Uloguj se">
+        </div>
+    </form>
+
+</center>
+{% endblock content %}

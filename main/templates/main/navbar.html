@@ -1,0 +1,29 @@
+{% load static %}
+<nav class="navbar">
+    <div class="brand__title">
+        <a href="{% url 'home' %}">NocnaPtica</a>
+    </div>
+    <a href="#" class="menu__toggle">
+        <span class="bars"></span>
+        <span class="bars"></span>
+        <span class="bars"></span>
+    </a>
+    <div class="nav__list">
+        <ul>
+            <li><a href="#">Dogadjaji</a></li>
+            <li><a href="{% url 'add_location' %}">Lokacije</a></li>
+
+            {% if user.is_authenticated %}
+            <li><a href="{% url 'logout_user' %}">Odjavljivanje</a></li>
+            {% else %}
+            <li><a href="{% url 'login_user' %}">Prijavljivanje</a></li>
+            <li><a href="{% url 'register_user' %}">Registracija</a></li>
+
+            {% endif %}
+        </ul>
+    </div>
+</nav>
+
+{% block scripts %}
+    <script src="{% static 'js/navbar.js' %}"></script>
+{% endblock scripts %}
