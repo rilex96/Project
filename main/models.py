@@ -1,5 +1,7 @@
+from distutils.command.upload import upload
 from django.db import models
 from django.contrib.auth.models import User
+
 
 # Create your models here.
 class Location(models.Model):
@@ -9,6 +11,7 @@ class Location(models.Model):
     web = models.URLField("Web Adresa", blank=True)
     email = models.EmailField("Email Adresa", blank=True)
     owner = models.IntegerField("Vlasnik Lokacije", blank=True, default=1)
+    location_image = models.ImageField(null=True, blank=True, upload_to="images/")
 
     def __str__(self):
         return self.ime
@@ -26,7 +29,7 @@ class NightBirdUser(models.Model):
 class Event(models.Model):
     ime = models.CharField("Naziv Dešavanja", max_length=120)
     event_date = models.DateTimeField("Datum Dogadjaja")
-    lokacija = models.ForeignKey(
+    location = models.ForeignKey(
         Location, blank=True, null=True, on_delete=models.CASCADE
     )
     manager = models.ForeignKey(User, blank=True, null=True, on_delete=models.SET_NULL)

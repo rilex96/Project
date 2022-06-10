@@ -47,6 +47,7 @@ input[type="submit"] {
     font-weight: 700;
     color: white;
     margin-top: 1em;
+    cursor: pointer;
 }
 
 

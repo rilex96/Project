@@ -27,9 +27,9 @@
     {% endif %}
 </center>
 {% else %}
-<h1>Sorry! You Must Be Logged In To View This Page...</h1>
+<h1>Morate biti prijavljeni da biste videli ovu stranicu...</h1>
 
-<a href="#">Login Here</a>
+<a class="login__btn" href="{% url 'login_user' %}">Prijavite se</a>
 {% endif %}
 
 {% endblock content %}

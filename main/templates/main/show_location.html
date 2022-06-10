@@ -1,0 +1,22 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block extrahead %}
+<link rel="stylesheet" href="{% static 'css/location.css' %}">{% endblock extrahead %}
+{% block content %}
+<div class="card">
+    <h1>{{ location }}</h1>
+    <div class="card__content">
+        <ul>
+            <li>{{ location.ime }}</li><br>
+            <li>{{ location.adresa }}</li><br>
+            <li>{{ location.tel }}</li><br>
+            <li>{{ location.web }}</li><br>
+            <li>{{ location.email }}</li><br>
+            {% if location.location_image %}
+                <img class="image_card" src="{{ location.location_image.url }}">
+            {% endif %}
+            
+        </ul>
+    </div>
+</div>
+{% endblock content %}

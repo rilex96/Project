@@ -7,7 +7,7 @@ from django import forms
 
 
 class RegisterUserForm(UserCreationForm):
-    email = forms.EmailField
+    email = forms.EmailField(label="Email Adresa")
     ime = forms.CharField(max_length=50)
     prezime = forms.CharField(max_length=50)
 

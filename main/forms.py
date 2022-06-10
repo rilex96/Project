@@ -6,7 +6,7 @@ from .models import Location, Event
 class LocationForm(ModelForm):
     class Meta:
         model = Location
-        fields = ("ime", "adresa", "tel", "web", "email")
+        fields = ("ime", "adresa", "tel", "web", "email", "location_image")
 
         widgets = {
             "ime": forms.TextInput(

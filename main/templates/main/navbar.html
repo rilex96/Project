@@ -11,7 +11,8 @@
     <div class="nav__list">
         <ul>
             <li><a href="#">Dogadjaji</a></li>
-            <li><a href="{% url 'add_location' %}">Lokacije</a></li>
+            <li><a href="{% url 'add_location' %}">Dodaj Lokaciju</a></li>
+            <li><a href="{% url 'list_locations' %}">Vidi Lokacije</a></li>
 
             {% if user.is_authenticated %}
             <li><a href="{% url 'logout_user' %}">Odjavljivanje</a></li>
